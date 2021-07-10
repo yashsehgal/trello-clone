@@ -6,7 +6,8 @@ import { useState } from "react";
 import CreateNewTaskModalForm from "../CreateNewTaskModalForm/CreateNewTaskModalForm";
 
 import SaveDataInLocalStorage from "../../utils/SaveDataInLocalStorage";
-import ReloadTaskCard from "../../utils/ReloadTaskCard";
+
+Modal.setAppElement('#root');
 
 function retrieveTaskDetails() {
   
@@ -28,7 +29,8 @@ function retrieveTaskDetails() {
 
 function Navbar() {
 
-  const [createNewTaskModal, setCreateNewTaskModal] = useState(true);
+  const [createNewTaskModal, setCreateNewTaskModal] = useState(false);
+  console.log(useState());  
   
   return (
     <div className="Navbar">
@@ -53,7 +55,7 @@ function Navbar() {
           </button>
         </ul>
       </div>
-      <Modal 
+      <Modal
         isOpen={createNewTaskModal}
         onRequestClose={() => setCreateNewTaskModal(false)}
         style={{
@@ -95,8 +97,6 @@ function Navbar() {
           <button onClick={() => {
             retrieveTaskDetails()
             setCreateNewTaskModal(false)
-            ReloadTaskCard()
-
           }}
             className="button-save solid-button"
           >
