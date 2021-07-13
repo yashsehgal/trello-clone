@@ -1,0 +1,9 @@
+.App {
+  background: white;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+textarea, input, button, select, option {
+  font-family: inherit;
+}
