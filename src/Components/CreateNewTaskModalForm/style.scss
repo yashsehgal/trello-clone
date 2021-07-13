@@ -1,0 +1,50 @@
+
+
+div.CreateNewTaskModalForm {
+
+  > h3.headline {
+    color: var(--bg-color-dark);
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 24px;
+  }
+
+  > div.form-input-section {
+    display: grid;
+    grid-template-columns: auto;
+
+    > label {
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--bg-color-dark-gray);
+      margin-top: 0.4em;
+      margin-bottom: 0.4em;
+    }
+
+    > input, 
+      textarea {
+      border: 1px solid var(--bg-color-dark-gray);
+      border-radius: 4px;
+
+      &:focus {
+        outline: none !important;
+      }
+    }
+
+    > input {
+      padding: 0.6em;
+    }
+
+    > input.task-description {
+
+      &::placeholder {
+        top: 0;
+        left: 0;
+      }
+
+    }
+
+  }
+
+}
